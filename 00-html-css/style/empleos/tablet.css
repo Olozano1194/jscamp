@@ -60,11 +60,12 @@ main form label input {
     padding: 1.2rem;       
 }
 
-main form .main-div-btns {
+main form .form-filter {
+    width: 75%;
     grid-template-columns: 1fr 1fr 1fr 1fr;    
 }
 
-main form .main-div-btns button {
+main form .form-filter section {
     cursor: pointer;        
 }
 

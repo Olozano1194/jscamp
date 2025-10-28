@@ -39,6 +39,10 @@ a {
     font-weight: 800;
 }
 
+.is-hidden {
+    display: none !important;
+}
+
 /* Header */
 header {
     width: 100%;
@@ -166,7 +170,7 @@ main form label input {
     
 }
 
-main form .main-div-btns {
+main form .form-filter {
     width: 90%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -176,7 +180,7 @@ main form .main-div-btns {
     padding-top: 1rem;
 }
 
-main form .main-div-btns button {
+main form .form-filter select {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -185,8 +189,19 @@ main form .main-div-btns button {
     border: none;
     border-radius: 1rem;
     color: var(--text-primary);
+    cursor: pointer;
     font-size: 1.3rem;
     padding: 0.5rem;
+
+    &:hover {
+        background-color: var(--primary-hover);
+        color: var(--text-primary);
+    }
+
+    &:focus {
+        outline: 2px solid var(--primary-light);
+        outline-offset: 2px;
+    }
 }
 
 /* main cards */

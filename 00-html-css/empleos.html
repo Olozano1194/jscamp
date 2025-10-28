@@ -47,17 +47,39 @@
             </svg>
             <input type="text">            
         </label>
-        <div class="main-div-btns">
-            <button>Tecnología <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></button>
-            <button>Ubicación <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></button>
-            <button>Tipo de contrato <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></button>
-            <button>Nivel de experiencia <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></button>
+        <div class="form-filter">
+            <select id="tecnologia">
+                <option value="">Tecnología</option>
+                <option value="javascript">Javascript</option>
+                <option value="react">React</option>
+                <option value="express">Express</option>
+                <option value="python">Python</option>
+                <option value="django">Django</option>
+            </select>
+            <select id="ubicacion">
+                <option value="">Ubicación</option>
+                <option value="remoto">Remoto</option>
+                <option value="cdmx">Ciudad de Mexico</option>
+                <option value="guadalajara">Guadalajara</option>
+            </select>
+            <select id="contrato">
+                <option value="">Tipo de contrato</option>
+                <option value="aprendizaje">Aprendizaje</option>
+                <option value="indefinido">Indefinido</option>
+                <option value="termino_fijo">Termino fijo</option>
+            </select>
+            <select id="experiencia">
+                <option value="">Nivel de experiencia</option>
+                <option value="junior">Junior</option>
+                <option value="medium">Medium</option>
+                <option value="senior">Senior</option>
+            </select>
         </div>
     </form>
     <section class="card">
         <h2>Resultados de búsqueda</h2>
-        <div>
-            <article>
+        <div class="container-card">
+            <article class="card-item" data-tecnologia="javascript" data-ubicacion="remoto" data-contrato="indefinido" data-experiencia="medium">
                 <div class="main-card-div-article-container-text">
                     <h3>Ingeniero de Software</h3>
                     <span>Tech Solutions Inc. | Remoto</span>
@@ -68,10 +90,10 @@
                 </div>
             </article>
             <hr>
-            <article>
+            <article class="card-item" data-tecnologia="react" data-ubicacion="cdmx" data-contrato="aprendizaje" data-experiencia="junior">
                 <div class="main-card-div-article-container-text">
                     <h3>Analista de Datos</h3>
-                    <span>Tech Solutions Inc. | Remoto</span>
+                    <span>Tech Solutions Inc. | Ciudad de Mexico</span>
                     <p>Buscamos un Analista de datos con experiencia en desarrollo web y conocimientos en JavaScript, React, Node.Js. El candidato ideal debe ser capaz de trabajar en equipo y tener buenas habilidades de comunicación.</p>
                 </div>                
                 <div class="main-card-div-btn">
@@ -79,10 +101,10 @@
                 </div>
             </article>
             <hr>
-            <article>
+            <article class="card-item" data-tecnologia="python" data-ubicacion="guadalajara" data-contrato="termino_fijo" data-experiencia="senior">
                 <div class="main-card-div-article-container-text">
                     <h3>Desarrollador de Aplicaciones Móviles</h3>
-                    <span>Tech Solutions Inc. | Remoto</span>
+                    <span>Tech Solutions Inc. | Guadalajara</span>
                     <p>Buscamos un Desarrollador de aplicaciones móviles con experiencia en desarrollo web y conocimientos en JavaScript, React, Node.Js. El candidato ideal debe ser capaz de trabajar en equipo y tener buenas habilidades de comunicación.</p>
                 </div>                
                 <div class="main-card-div-btn">
@@ -90,7 +112,7 @@
                 </div>
             </article>
             <hr>
-            <article>
+            <article class="card-item" data-tecnologia="django" data-ubicacion="remoto" data-contrato="aprendizaje" data-experiencia="junior">
                 <div class="main-card-div-article-container-text">
                     <h3>Ingeniero de DevOps</h3>
                     <span>Tech Solutions Inc. | Remoto</span>
@@ -114,6 +136,7 @@
   </main>
   <footer>
     <small>&copy; 2025 DevJobs. Todos los derechos reservados.</small>
-  </footer>     
+  </footer>
+  <script type="module" src="../01-javascript/empleados.js"></script>     
 </body>
 </html>
