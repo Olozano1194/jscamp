@@ -193,11 +193,6 @@ main form .form-filter select {
     font-size: 1.3rem;
     padding: 0.5rem;
 
-    &:hover {
-        background-color: var(--primary-hover);
-        color: var(--text-primary);
-    }
-
     &:focus {
         outline: 2px solid var(--primary-light);
         outline-offset: 2px;
@@ -229,6 +224,10 @@ main .card div hr {
     width: 100%;
     border: 1px solid var(--border);
     margin-bottom: 1.5rem;
+}
+
+.container-card hr:last-of-type {
+    display: none;
 }
 
 main .card div article {
@@ -268,7 +267,12 @@ main .card div article .main-card-div-btn button {
     color: var(--text-primary);
     font-weight: 700;
     font-size: 1.4rem;
-    padding: 2rem;    
+    padding: 2rem;
+    
+    &.is-applied {
+        background: #4caf50;
+        pointer-events: none;
+    }
 }
 
 /* pagination */
